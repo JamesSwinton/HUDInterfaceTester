@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:context=".MainActivity">
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+      android:id="@+id/base_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+      <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/clear_before_display_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="Clear Display Before Showing Next Intent?" />
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/data_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Data"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/data"
+          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:textSize="14sp"
+          android:text="TEST DATA"/>
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_size_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Text Size"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/text_size"
+          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:inputType="number"
+          android:textSize="14sp"
+          android:text="10" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:id="@+id/position_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Position"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp">
+
+        <AutoCompleteTextView
+          android:id="@+id/position"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:editable="false"
+          android:textSize="14sp"/>
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:id="@+id/text_color_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Text Colour"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp">
+
+        <AutoCompleteTextView
+          android:id="@+id/text_color"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:editable="false"
+          android:textSize="14sp"/>
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:id="@+id/background_color_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Background Colour"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp">
+
+        <AutoCompleteTextView
+          android:id="@+id/background_color"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:editable="false"
+          android:textSize="14sp"/>
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:id="@+id/send_intent_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="DISPLAY DATA"
+        android:backgroundTint="@color/colorAccent"/>
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/pick_image"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_add_image"/>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/image_width_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Width"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/image_width"
+          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:inputType="number"
+          android:textSize="14sp"
+          android:text="640" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/image_height_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Height"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/image_height"
+          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:inputType="number"
+          android:textSize="14sp"
+          android:text="300" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:id="@+id/image_scale_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Image Scale"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp">
+
+        <AutoCompleteTextView
+          android:id="@+id/image_scale"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:editable="false"
+          android:textSize="14sp"/>
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:id="@+id/display_image_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="DISPLAY_IMAGE"
+        android:backgroundTint="@color/colorAccent"/>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/jim_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="JIM"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/jim_data"
+          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:inputType="text"
+          android:textSize="14sp"
+          android:text="@string/sample_jim" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/jim_images_directory_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Image Directory"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/jim_images_directory"
+          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:inputType="text"
+          android:textSize="14sp"
+          android:text="/sdcard/downloads/" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:id="@+id/send_jim_intent_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="DISPLAY JIM"
+        android:backgroundTint="@color/colorAccent"/>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/capture_image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Image Directory"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/capture_image_path"
+          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:inputType="text"
+          android:textSize="14sp"
+          android:text="/sdcard/HUD Captures/" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/capture_image_path_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Image File Name"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/capture_image_file_name"
+          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:inputType="text"
+          android:textSize="14sp"
+          android:text="sample-capture.png" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:id="@+id/send_capture_image_intent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="CAPTURE IMAGE"
+        android:backgroundTint="@color/colorAccent"/>
+
+      <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:id="@+id/clear_display_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="CLEAR DISPLAY"
+        android:backgroundTint="@color/colorAccent"/>
+
+      <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:id="@+id/toggle_overlay_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="TOGGLE OVERLAY"
+        android:backgroundTint="@color/colorAccent"/>
+
+    </LinearLayout>
+
+  </ScrollView>
+
+</layout>

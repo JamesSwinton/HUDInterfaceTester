@@ -1,0 +1,8 @@
+<resources>
+  <string name="app_name">HudInterfaceTester</string>
+
+  <string name="sample_jim">
+  {\"ver\": \"1.0\",  \"showFrame\": false,  \"widgets\": [      {        \"sort\": 70,        \"note\": \"instruction string\",        \"position\": [0, 0, 100, 10],        \"data\": \"Remove hub cap label 3\",        \"colorBack\": \"#A0111111\",        \"bold\": true    }    ]  }
+
+  </string>
+</resources>
