@@ -81,14 +81,11 @@ public class SendPendingIntentActivity extends AppCompatActivity {
             Intent intent = new Intent();
             intent.setAction("com.zebra.hudinterface.DISPLAY_TEXT");
             if (mDataBinding.clearBeforeDisplayCheckbox.isChecked()) {
-                intent.putExtra("text.text", "^" + (mDataBinding.data.getText() != null
-                        ? mDataBinding.data.getText().toString() : null));
+                intent.putExtra("text.text", "^" + (mDataBinding.data.getText() != null ? mDataBinding.data.getText().toString() : null));
             } else {
-                intent.putExtra("text.text", mDataBinding.data.getText() != null
-                        ? mDataBinding.data.getText().toString() : null);
+                intent.putExtra("text.text", mDataBinding.data.getText() != null ? mDataBinding.data.getText().toString() : null);
             }
-            intent.putExtra("text.size", mDataBinding.textSize.getText() != null
-                    ? Integer.valueOf(mDataBinding.textSize.getText().toString()) : null);
+            intent.putExtra("text.size", mDataBinding.textSize.getText() != null ? mDataBinding.textSize.getText().toString() : null);
             intent.putExtra("text.justification", mPosition);
             intent.putExtra("text.background_colour", mBackgroundColour);
             intent.putExtra("text.colour", mTextColour);
@@ -109,9 +106,9 @@ public class SendPendingIntentActivity extends AppCompatActivity {
                 intent.putExtra("image.path", mImagePath);
             }
             intent.putExtra("image.width", mDataBinding.imageWidth.getText() != null
-                    ? Integer.valueOf(mDataBinding.imageWidth.getText().toString()) : null);
+                    ? mDataBinding.imageWidth.getText().toString() : null);
             intent.putExtra("image.height", mDataBinding.imageHeight.getText() != null
-                    ? Integer.valueOf(mDataBinding.imageHeight.getText().toString()) : null);
+                    ? mDataBinding.imageHeight.getText().toString() : null);
             intent.putExtra("image.scale", mScale);
             sendBroadcast(intent);
         });
